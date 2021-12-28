@@ -1,5 +1,11 @@
+import random
+
+
 class Logic:
     
+    def __init__(self) -> None:
+        self.text = ['hello world', 'we love python', "why isn't this project easy"]
+
     def calculate_accuracy(self, original_string, comparison_string):
         original = [letter for letter in original_string]
         comparison = [letter for letter in comparison_string]
@@ -19,3 +25,6 @@ class Logic:
         minutes = time / 60
 
         return int(word_count // minutes)
+
+    def get_text(self):
+        return random.choice(self.text)

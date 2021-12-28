@@ -61,3 +61,10 @@ def test_wpm_calc_with_variable_time():
     actual = logic.calculate_wpm('hello world now in python', 'hello world now in python please count all these words hello world now in python please count all these words', 120)
     expected = 10
     assert actual == expected
+
+def test_get_text():
+    logic = Logic()
+
+    actual = logic.get_text()
+    expected = ['hello world', 'we love python', "why isn't this project easy"]
+    assert actual in expected
