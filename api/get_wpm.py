@@ -17,7 +17,7 @@ class handler(BaseHTTPRequestHandler):
 
     logic = Logic()
 
-    wpm = logic.calculate_wpm(query.original, query.comparison, query.time)
+    wpm = logic.calculate_wpm(query[original], query[comparison], query[time])
     accuracy = logic.calculate_accuracy(query.original, query.comparison)
 
     obj = {'wpm': f'{wpm}', 'accuracy': f'{accuracy}'}
