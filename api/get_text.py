@@ -1,15 +1,19 @@
 from http.server import BaseHTTPRequestHandler
 from speed_typing.back_end.logic import Logic
+import json
 from urllib import parse
 
 class handler(BaseHTTPRequestHandler):
 
   def do_GET(self):
     self.send_response(200)
-    self.send_header('Content-type', 'text/plain')
+    self.send_header('Content-type', 'application/json')
     self.end_headers()
 
     logic = Logic()
+    text = logic.get_text()
+    obj = {'text': f'{text}'}
+    message = json.dumps(obj)
+    self.wfile.write(message.encode())
 
-
-    return logic.get_text()
+    return 
