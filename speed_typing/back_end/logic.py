@@ -22,7 +22,7 @@ class Logic:
         words = comparison_string.split()
         word_count = len(words)
 
-        minutes = time / 60
+        minutes = int(time) / 60
 
         return int(word_count // minutes)
 
