@@ -75,3 +75,10 @@ def test_get_wpm_string():
     actual = logic.calculate_wpm('hello world now in python', 'hello world now in python please count all these words hello world now in python please count all these words', '120')
     expected = 10
     assert actual == expected
+
+def test_accuracy_different_lengths():
+    logic = Logic()
+
+    actual = logic.calculate_accuracy('hello world now in python please count all these words hello world now in python please count all these words', 'hello world now in python', )
+    expected = 10
+    assert actual == expected

@@ -11,8 +11,11 @@ class handler(BaseHTTPRequestHandler):
 
         logic = Logic()
         wpm = logic.calculate_wpm(input_obj['original'], input_obj['comparison'], input_obj['time'])
-        accuracy = logic.calculate_accuracy(input_obj['original'], input_obj['comparison'])
-        output_obj = {"wpm": f"{wpm}", "accuracy": f"{accuracy}"}
+        accuracy = logic.calculate_accuracy(input_obj['original'], input_obj['comparison']) 
+        output_obj = {
+                    "wpm": f"{wpm}", 
+                    "accuracy": f"{accuracy}"
+                    }
 
 
         self.send_response(HTTPStatus.OK)

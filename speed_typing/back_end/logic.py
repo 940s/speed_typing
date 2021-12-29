@@ -6,12 +6,23 @@ class Logic:
     def __init__(self) -> None:
         self.text = ['hello world', 'we love python', "why isn't this project easy"]
 
+    @staticmethod
+    def find_shorter(a, b):
+        if a < b:
+            return a
+        return b
+
     def calculate_accuracy(self, original_string, comparison_string):
         original = [letter for letter in original_string]
         comparison = [letter for letter in comparison_string]
         total = 0
+        
+        original_len = len(original)
+        comparison_len = len(comparison)
+        shortest_list = self.find_shorter(comparison_len, original_len)
 
-        for i,_ in enumerate(original):
+
+        for i in range(shortest_list):
             if original[i] == comparison[i]:
                 total += 1
 
