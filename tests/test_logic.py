@@ -96,3 +96,18 @@ def test_words_perminute_by5():
     actual = logic.calculate_wpm('abcdeadsfdsaasd', 'abcdefghijklasd','60')
     expected = 3
     assert actual == expected
+
+def test_words_errors():
+    logic = Logic()
+
+    actual = logic.net_words_wpm('1234567890', '1234567890','60', '0')
+    expected = 2
+    assert actual == expected
+
+def test_words_errors_2():
+    logic = Logic()
+
+    actual = logic.net_words_wpm('1234567890', '1234567890','60', '60')
+    expected = 1
+    assert actual == expected
+

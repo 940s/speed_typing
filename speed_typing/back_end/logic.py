@@ -38,3 +38,11 @@ class Logic:
 
     def get_text(self):
         return random.choice(self.text)
+
+    def net_words_wpm(self, original_string, comparison_string, time, errors):
+        gross_words_per_minute = self.calculate_wpm(original_string, comparison_string, time)
+        errors_per_minute = int(errors) / int(time)
+        return gross_words_per_minute - errors_per_minute
+        
+
+
