@@ -111,3 +111,18 @@ def test_words_errors_2():
     expected = 1
     assert actual == expected
 
+def test_new_accuracy():
+    logic = Logic()
+
+    actual = logic.new_accuracy('1234567890', '1234567890', '60', '0')
+    expected = 1
+    assert actual == expected
+
+def test_new_accuracy_2():
+    logic = Logic()
+
+    actual = logic.new_accuracy('1234567890', '1234567890', '60', '60')
+    expected = .5
+    assert actual == expected
+
+

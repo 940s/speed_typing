@@ -43,6 +43,9 @@ class Logic:
         gross_words_per_minute = self.calculate_wpm(original_string, comparison_string, time)
         errors_per_minute = int(errors) / int(time)
         return gross_words_per_minute - errors_per_minute
-        
 
+    def new_accuracy(self, original_string, comparison_string, time, errors):
+        net_words_per_minute = self.net_words_wpm(original_string, comparison_string, time, errors)
+        gross_words_per_minute = self.calculate_wpm(original_string, comparison_string, time)
+        return net_words_per_minute/gross_words_per_minute
 
