@@ -35,14 +35,14 @@ def test_white_space_multi_char():
 def test_wpm_calc():
     logic = Logic()
 
-    actual = logic.calculate_wpm('12345678', '12345678', 60)
+    actual = logic.calculate_wpm('123456789 ', '123456789 ', 60)
     expected = 2
     assert actual == expected
 
 def test_wpm_calc_short():
     logic = Logic()
 
-    actual = logic.calculate_wpm('hello world ', 'hello world ', 60)
+    actual = logic.calculate_wpm('hello world9   ', 'hello world9   ', 60)
     expected = 3
     assert actual == expected
 
@@ -50,7 +50,7 @@ def test_wpm_calc_short():
 def test_wpm_calc_long():
     logic = Logic()
 
-    actual = logic.calculate_wpm('12345678    ', '12345678    ', 60)
+    actual = logic.calculate_wpm('1234567890     ', '1234567890     ', 60)
     expected = 3
     assert actual == expected
 
@@ -58,7 +58,7 @@ def test_wpm_calc_long():
 def test_wpm_calc_with_variable_time():
     logic = Logic()
 
-    actual = logic.calculate_wpm('12345678    ', '12345678    ', 120)
+    actual = logic.calculate_wpm('1234567890     ', '1234567890     ', 120)
     expected = 1
     assert actual == expected
 
@@ -72,7 +72,7 @@ def test_get_text():
 def test_get_wpm_string():
     logic = Logic()
 
-    actual = logic.calculate_wpm('12345678    ', '12345678    ', '120')
+    actual = logic.calculate_wpm('1234567890     ', '1234567890     ', '120')
     expected = 1
     assert actual == expected
 
@@ -90,9 +90,9 @@ def test_accuracy_different_lengths_swapped():
     expected = 0.5
     assert actual == expected
 
-def test_words_perminute_by4():
+def test_words_perminute_by5():
     logic = Logic()
 
-    actual = logic.calculate_wpm('abcdeadsfdsa', 'abcdefghijkl','60')
+    actual = logic.calculate_wpm('abcdeadsfdsaasd', 'abcdefghijklasd','60')
     expected = 3
     assert actual == expected

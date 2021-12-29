@@ -34,7 +34,7 @@ class Logic:
 
         minutes = int(time) / 60
 
-        return int(letter_count // 4 // minutes)
+        return int(letter_count // 5 // minutes)
 
     def get_text(self):
         return random.choice(self.text)
