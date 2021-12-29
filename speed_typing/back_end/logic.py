@@ -4,7 +4,16 @@ import random
 class Logic:
     
     def __init__(self) -> None:
-        self.text = ['hello world', 'we love python', "why isn't this project easy"]
+        self.text = [
+                    'One Ring to rule them all, One ring to find them; One ring to bring them all and in the darkness bind them.',
+                    'Many were increasingly of the opinion that they\'d all made a big mistake in coming down from the trees in the first place. And some said that even the trees had been a bad move, and that no one should ever have left the oceans.', 
+                    'Verily this vichyssoise of verbiage veers most verbose, so let me simply add that it\'s my very good honour to meet you and you may call me V.', 
+                    'Beautiful is better than ugly. Explicit is better than implicit. Simple is better than complex. Complex is better than complicated. Flat is better than nested. Sparse is better than dense. Readability counts.',
+                    'Strangers from distant lands, friends of old. You have been summoned here to answer the threat of Mordor. Middle-Earth stands upon the brink of destruction. None can escape it. You will unite or you will fall.',
+                    "You know you are working on clean code when each routine you read turns out to be pretty much what you expected. You can call it beautiful code when the code also makes it look like the language was made for the problem.",
+                    'Permanence, perseverance and persistence in spite of all obstacles, discouragements, and impossibilities: It is this, that in all things distinguishes the strong soul from the weak.',
+                    'I\'ve seen things you people wouldn\'t believe. Attack ships on fire off the shoulder of Orion. I watched C-beams glitter in the dark near the Tannhauser Gate. All those moments will be lost in time, like tears in rain.'
+                    ]
 
     @staticmethod
     def find_shorter(a, b):
