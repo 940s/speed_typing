@@ -15,13 +15,12 @@ class Logic:
     def calculate_accuracy(self, original_string, comparison_string):
         original = [letter for letter in original_string]
         comparison = [letter for letter in comparison_string]
-        total = 0
         
-        original_len = len(original)
-        comparison_len = len(comparison)
-        shortest_list = self.find_shorter(comparison_len, original_len)
+    
+        shortest_list = self.find_shorter(len(comparison), len(original))
 
 
+        total = 0
         for i in range(shortest_list):
             if original[i] == comparison[i]:
                 total += 1
