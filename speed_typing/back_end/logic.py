@@ -29,12 +29,12 @@ class Logic:
 
 
     def calculate_wpm(self, original_string, comparison_string, time):
-        words = comparison_string.split()
-        word_count = len(words)
+        letters = [letter for letter in comparison_string]
+        letter_count = len(letters)
 
         minutes = int(time) / 60
 
-        return int(word_count // minutes)
+        return int(letter_count // 4 // minutes)
 
     def get_text(self):
         return random.choice(self.text)

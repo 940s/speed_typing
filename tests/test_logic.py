@@ -35,31 +35,31 @@ def test_white_space_multi_char():
 def test_wpm_calc():
     logic = Logic()
 
-    actual = logic.calculate_wpm('hello world in python', 'hello world in python', 60)
-    expected = 4
+    actual = logic.calculate_wpm('12345678', '12345678', 60)
+    expected = 2
     assert actual == expected
 
 def test_wpm_calc_short():
     logic = Logic()
 
-    actual = logic.calculate_wpm('hello world', 'hello world', 60)
-    expected = 2
+    actual = logic.calculate_wpm('hello world ', 'hello world ', 60)
+    expected = 3
     assert actual == expected
 
 
 def test_wpm_calc_long():
     logic = Logic()
 
-    actual = logic.calculate_wpm('hello world now in python', 'hello world now in python please count all these words', 60)
-    expected = 10
+    actual = logic.calculate_wpm('12345678    ', '12345678    ', 60)
+    expected = 3
     assert actual == expected
 
 
 def test_wpm_calc_with_variable_time():
     logic = Logic()
 
-    actual = logic.calculate_wpm('hello world now in python', 'hello world now in python please count all these words hello world now in python please count all these words', 120)
-    expected = 10
+    actual = logic.calculate_wpm('12345678    ', '12345678    ', 120)
+    expected = 1
     assert actual == expected
 
 def test_get_text():
@@ -72,8 +72,8 @@ def test_get_text():
 def test_get_wpm_string():
     logic = Logic()
 
-    actual = logic.calculate_wpm('hello world now in python', 'hello world now in python please count all these words hello world now in python please count all these words', '120')
-    expected = 10
+    actual = logic.calculate_wpm('12345678    ', '12345678    ', '120')
+    expected = 1
     assert actual == expected
 
 def test_accuracy_different_lengths():
@@ -88,4 +88,11 @@ def test_accuracy_different_lengths_swapped():
 
     actual = logic.calculate_accuracy('abcdef', 'abc')
     expected = 0.5
+    assert actual == expected
+
+def test_words_perminute_by4():
+    logic = Logic()
+
+    actual = logic.calculate_wpm('abcdeadsfdsa', 'abcdefghijkl','60')
+    expected = 3
     assert actual == expected
