@@ -22,6 +22,7 @@ class handler(BaseHTTPRequestHandler):
 
     obj = {'wpm': f'{wpm}', 'accuracy': f'{accuracy}'}
     message = json.dumps(obj)
+    message = 'testing'
     self.wfile.write(message.encode())
 
     return
