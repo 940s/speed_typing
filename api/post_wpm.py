@@ -14,7 +14,8 @@ class handler(BaseHTTPRequestHandler):
         accuracy = logic.calculate_accuracy(input_obj['original'], input_obj['comparison']) 
         output_obj = {
                     "wpm": f"{wpm}", 
-                    "accuracy": f"{accuracy}"
+                    "accuracy": f"{accuracy}",
+                    "hi_scores": f"{logic.get_hi_score()}"
                     }
 
 

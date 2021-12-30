@@ -111,8 +111,15 @@ class Logic:
         
         with open('./hi_score.json', 'r') as file:
                 scores = json.load(file)
-        scores_list = scores['hi_scores'].sort()
+        scores_list = sorted(scores['hi_scores'], key=lambda x: x['score'])
 
-        return scores_list
+        return_list = []
+        for _ in range(10):
+            try:
+                return_list.append(scores_list.pop())
+            except IndexError:
+                print('list is empty')
+
+        return return_list
             
     
