@@ -34,7 +34,7 @@ class Logic:
             if original[i] == comparison[i]:
                 total += 1
 
-        return total / len(original)
+        return int((total / len(original)) * 100)
 
 
     def calculate_wpm(self, original_string, comparison_string, time):
