@@ -100,7 +100,7 @@ class Logic:
 
             old_file = json.load(file)
         
-        obj = {'score': score, 'wpm': wpm, 'accuracy': accuracy}
+        obj = {"score": score, "wpm": wpm, "accuracy": accuracy}
         old_file['hi_scores'].append(obj)
 
         with open('./hi_score.json', 'w') as file:
