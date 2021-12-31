@@ -105,8 +105,7 @@ class Logic:
 
         with open('./hi_score.json', 'w') as file:
 
-            file.write(json.dumps(old_file))
-
+            json.dump(old_file, file)
 
 
 
@@ -132,5 +131,4 @@ class Logic:
 
         with open('./hi_score.json', 'w') as file:
 
-            file.write(json.dumps(new_content))
-    
+            json.dump(new_content, file)
