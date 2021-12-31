@@ -1,2 +1,0 @@
-'score': 9000, 'wpm': 90, 'accuracy': 100 
-'score': 9200, 'wpm': 92, 'accuracy': 100 
