@@ -105,8 +105,7 @@ class Logic:
 
         with open('./hi_score.json', 'w') as file:
 
-            file.write(json.dumps(old_file))
-
+            json.dump(old_file, file)
 
 
 
@@ -125,4 +124,11 @@ class Logic:
 
         return return_list
             
-    
+    def clear_json(self):
+
+        new_content = {"hi_scores": []}
+
+
+        with open('./hi_score.json', 'w') as file:
+
+            json.dump(new_content, file)
