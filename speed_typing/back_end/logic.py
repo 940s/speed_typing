@@ -114,7 +114,7 @@ class Logic:
         
         with open('./hi_score.json', 'r') as file:
                 scores = json.load(file)
-        scores_list = sorted(scores['hi_scores'], key=lambda x: x['score'])
+        scores_list = sorted(scores['hi_scores'], key=lambda x: int(x['score']))
 
         return_list = []
         for _ in range(10):
