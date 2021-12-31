@@ -71,6 +71,9 @@ class Logic:
 
         minutes = int(time) / 60
 
+        if minutes == 0:
+            minutes = 0.1
+
         return int(letter_count // 5 // minutes)
 
     def get_text(self):
