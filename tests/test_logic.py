@@ -7,7 +7,7 @@ def test_params():
     logic = Logic()
 
     actual = logic.calculate_accuracy('hi', 'ji')
-    expected = 0
+    expected = 50
     assert actual == expected
 
 def test_params_two():
@@ -96,7 +96,7 @@ def test_accuracy_different_lengths_swapped():
     logic = Logic()
 
     actual = logic.calculate_accuracy('abcdef', 'abc')
-    expected = 0
+    expected = 50
     assert actual == expected
 
 def test_words_perminute_by5():

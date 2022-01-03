@@ -11,4 +11,3 @@ def test_errors():
     expected = 0
     assert actual == expected
 
-    
