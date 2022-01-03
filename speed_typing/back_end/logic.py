@@ -32,29 +32,17 @@ class Logic:
             return a
         return b
 
-    def calculate_accuracy(self, original_string, comparison_string):
+    def calculate_accuracy(self, original_string, comparison_string) -> int:
 
+        return int(self.string_percent_match(original_string, comparison_string) * 100)
 
-        return int(self.string_percent_match(original_string, comparison_string)) * 100
-        # original = [letter for letter in original_string]
-        # comparison = [letter for letter in comparison_string]
-        
-    
-        # shortest_list = self.find_shorter(len(comparison), len(original))
-
-
-        # total = 0
-        # for i in range(shortest_list):
-        #     if original[i] == comparison[i]:
-        #         total += 1
-
-        # return int((total / len(original)) * 100)
     
     def string_percent_match(self, original_string, comparison_string) -> float:
         original = [letter for letter in original_string]
+        comparison = [letter for letter in comparison_string]
         offset = 0
 
-        for letter in comparison_string:
+        for letter in comparison:
             try:
                 original.remove(letter)
             except ValueError:
